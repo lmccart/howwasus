@@ -5,11 +5,41 @@
 
 <body>
 
-
 <form action="submit.php" method="post">
-Name: <input type="text" name="fname">
-Age: <input type="text" name="age">
-<input type="submit">
+	<table border="0" align="center" cellpadding="2" cellspacing="0">
+		<tr>
+		<td>How would you rate our interaction?</td>
+		<td><select name="their_rate">
+		<option value=""></option>
+		<?php
+		for($i = 1; $i<6; $i++){
+			echo '<option value="'.$i.'">'.$i.'</option>';
+		}
+		?>
+		</select></td>
+		</tr>
+		
+		<tr>
+		<td>How do you think I would rate our interaction?</td>
+		<td><select name="their_predicted_rate">
+		<option value=""></option>
+		<?php
+		for($i = 1; $i<6; $i++){
+			echo '<option value="'.$i.'">'.$i.'</option>';
+		}
+		?>
+		</select></td>
+		</tr>
+		
+		<tr>
+		<td>Describe our interaction in one sentence.<br></td>
+		<td><input type="text" name="description"></td>
+		</tr> 
+		      
+		<tr>
+		<td><input type="submit"></td>
+		</tr>
+	</table>
 </form>
 
 </body>
